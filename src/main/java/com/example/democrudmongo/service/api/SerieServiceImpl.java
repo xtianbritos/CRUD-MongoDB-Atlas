@@ -38,6 +38,6 @@ public class SerieServiceImpl implements ISerieServiceApi{
 
     @Override
     public void eliminarSeriePorId(String id) {
-        repo.deleteById(id);
+        repo.delete(obtenerSeriePorId(id));
     }
 }

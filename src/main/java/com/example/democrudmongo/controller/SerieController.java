@@ -33,13 +33,13 @@ public class SerieController {
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping("{id}")
-    public Serie actualizarSeriePorId(String id, Serie datos) {
+    public Serie actualizarSeriePorId(@PathVariable String id, @RequestBody Serie datos) {
         return service.actualizarSeriePorId(id, datos);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("{id}")
-    public void eliminarSeriePorId(String id) {
+    public void eliminarSeriePorId(@PathVariable String id) {
         service.eliminarSeriePorId(id);
     }
 }
